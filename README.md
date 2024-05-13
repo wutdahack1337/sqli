@@ -38,12 +38,12 @@ Một thứ quan trọng cần phải biết là "--", nếu "--" xuất hiện 
 Hãy thử đoán xem chuyện gì sẽ xảy ra nếu t nhấn nút "Log in" khi nhập thông tin sau:
 ![image](https://github.com/wutdahack1337/sqli/assets/153523415/9f857e78-db26-4d37-ba5a-9865be73d528)
 
-## 2. Vào vấn đề chính
+## 2. Bypass
 Bây giờ, khi thông tin được gửi vào database, lệnh truy vấn SQL sẽ nhìn như sau:
 ```
   SELECT username, password
   FORM users
-  WHERE username = 'wutdahack1337' OR 1 = 1 -- AND password = 'hahahaha'
+  WHERE username = 'wutdahack1337' OR 1 = 1 --' AND password = 'hahahaha'
 ```
 Như t đã nói trước đó, "--" sẽ lờ đi tất cả những gì đằng sau nó, vậy truy vấn trở thành:
 ```
@@ -51,7 +51,8 @@ Như t đã nói trước đó, "--" sẽ lờ đi tất cả những gì đằn
   FORM users
   WHERE username = 'wutdahack1337' OR 1 = 1
 ```
-Do lệnh WHERE luôn trả về TRUE nên chúng sẽ đăng nhập được mà không cần tới mật khẩu!
-Tới đây bạn đã có thể giải được lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass).
+Vì điều kiện trong lệnh WHERE luôn trả về TRUE nên t sẽ đăng nhập được mà không cần tới mật khẩu!  
+
+Hãy thử giải bài lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass).
 
 # II. sqlmap Tool (coming soon)
