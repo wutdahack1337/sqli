@@ -14,7 +14,7 @@ Injection có thể được chia thành nhiều loại, nhưng hôm nay t sẽ 
 ## 1. Những thứ cần biết
 [SQL](https://en.wikipedia.org/wiki/SQL) (hay Structured Query Language) là một ngôn ngữ lập trình được sử dụng để truy vấn hoặc quản lý, tương tác với dữ liệu được lưu trữ trong databases. Nó được phát triển bởi IBM vào những năm 1970 và hiện nay đang được sử dụng rộng rãi trong hệ thống quản lý cơ sở dữ liệu ([DBMS](https://en.wikipedia.org/wiki/Database)), như là MariaDB (MySQL), Oracle, PostgreSQL, ...  
 
-Databases có thể được sử dụng cho các mục đích xác thực người dùng, thương mại điện tử, lưu trữ dữ liệu khách hàng và hàng tá những thông tin nhạy cảm khác. Nếu hackers chèn và gửi các lệnh SQL độc hại vào [forms](https://portswigger.net/web-security/sql-injection/lab-login-bypass) hoặc [tham số URL](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data), hacker có thể thực thi những commands để thay đổi, xóa thậm chí là trích xuất dữ liệu từ databases. Đó cũng chính là mục tiêu của SQL Injection.
+Databases có thể được sử dụng cho các mục đích xác thực người dùng, thương mại điện tử, lưu trữ dữ liệu khách hàng và hàng tá những thông tin nhạy cảm khác. Nếu hackers chèn và gửi các lệnh SQL độc hại vào forms hoặc tham số URL, hacker có thể thực thi những commands để thay đổi, xóa thậm chí là trích xuất dữ liệu từ databases. Đó cũng chính là mục tiêu của SQL Injection.
 
 Trước khi thực hành SQLi, ta cần phải biết và hiểu một chút về SQL. Một truy vấn SQL cơ bản sẽ có dạng như sau:  
 ```
@@ -53,6 +53,6 @@ Như t đã nói trước đó, "--" sẽ lờ đi tất cả những gì đằn
 ```
 Vì điều kiện trong lệnh WHERE luôn trả về TRUE nên t sẽ đăng nhập được mà không cần tới mật khẩu!  
 
-Hãy thử giải bài lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass).
+Hãy thử giải bài lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass) và lab [này](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data).
 
 # II. sqlmap Tool (coming soon)
