@@ -39,7 +39,7 @@ Hãy thử đoán xem chuyện gì sẽ xảy ra nếu t nhấn nút "Log in" kh
 ![image](https://github.com/wutdahack1337/sqli/assets/153523415/9f857e78-db26-4d37-ba5a-9865be73d528)
 
 ## 2. Bypass
-Bây giờ, khi thông tin được gửi vào database, lệnh truy vấn SQL sẽ nhìn như sau:
+Khi thông tin được gửi vào database, lệnh truy vấn SQL sẽ nhìn như sau:
 ```
   SELECT username, password
   FORM users
