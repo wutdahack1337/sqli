@@ -22,7 +22,7 @@ Trước khi thực hành SQLi, ta cần phải biết và hiểu một chút v�
   FORM <table>
   WHERE <conditions>
 ```
-Những truy vấn đơn giản này có thể dùng để xác thực dữ liệu người dùng. Ví dụ có một database tên là "users" lưu trữ username và password của tất cả người dùng. Trên giao diện web, nếu người dùng muốn đăng nhập, thì họ sẽ phải nhập username và password vào một form đăng nhập, và sau đó hệ thống sẽ kiểm tra xem có bất kỳ username và password nào trùng khớp hay không.
+Những truy vấn đơn giản này có thể dùng để xác thực dữ liệu người dùng. Ví dụ có một table database tên là "users" lưu trữ username và password của tất cả người dùng. Trên giao diện web, nếu người dùng muốn đăng nhập, thì họ sẽ phải nhập username và password vào một form đăng nhập, và sau đó hệ thống sẽ kiểm tra xem có bất kỳ username và password nào trùng khớp hay không.
 
 ![image](https://github.com/wutdahack1337/sqli/assets/153523415/56b2d22a-6cb5-46dc-8ec5-13795ad57132)  
 Truy vấn sẽ nhìn như thế này:  
