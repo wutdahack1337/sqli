@@ -38,7 +38,7 @@ Hai thứ quan trọng cần phải biết để có thể tấn công SQLi là 
 Hãy thử đoán xem chuyện gì sẽ xảy ra nếu t nhấn nút "Log in" khi nhập thông tin sau:
 ![image](https://github.com/wutdahack1337/sqli/assets/153523415/9f857e78-db26-4d37-ba5a-9865be73d528)
 
-## 2. Bypass
+## 2. Bypass Xác Thực Người Dùng
 Khi thông tin được gửi vào database, lệnh truy vấn SQL sẽ nhìn như sau:
 ```
   SELECT username, password
