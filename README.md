@@ -55,4 +55,6 @@ Vì điều kiện trong lệnh WHERE luôn trả về TRUE nên t sẽ đăng n
 
 Sau khi đã nắm được ý tưởng chính của SQLi, t đã có thể giải được lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass) và lab [này](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data).
 
+## 3. Trích Xuất Dữ Liệu
+
 # II. sqlmap Tool (coming soon)
