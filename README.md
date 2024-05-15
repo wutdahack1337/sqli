@@ -12,7 +12,7 @@ Injection có thể được chia thành nhiều loại, nhưng hôm nay t sẽ 
 
 # I. SQL Injection
 ## 1. Những thứ cần biết
-[SQL](https://en.wikipedia.org/wiki/SQL) (hay Structured Query Language) là một ngôn ngữ lập trình được sử dụng để truy vấn hoặc quản lý, tương tác với dữ liệu được lưu trữ trong databases. Nó được phát triển bởi IBM vào những năm 1970 và hiện nay đang được sử dụng rộng rãi trong hệ thống quản lý cơ sở dữ liệu ([DBMS](https://en.wikipedia.org/wiki/Database)), như là MariaDB (MySQL), Oracle, PostgreSQL, ...  
+[SQL](https://en.wikipedia.org/wiki/SQL) (hay Structured Query Language) là một ngôn ngữ lập trình được sử dụng để truy vấn hoặc quản lý, tương tác với dữ liệu được lưu trữ trong databases. Nó được phát triển bởi IBM vào những năm 1970 và hiện nay đang được sử dụng rộng rãi trong hệ thống quản lý cơ sở dữ liệu ([DBMS](https://en.wikipedia.org/wiki/Database)), như là MariaDB (MySQL), Oracle, PostgreSQL, ...**Trong bài viết này, t sử dụng các lệnh của DBMS MariaDB (MySQL)**.
 
 Databases có thể được sử dụng cho các mục đích xác thực người dùng, thương mại điện tử, lưu trữ dữ liệu khách hàng và hàng tá những thông tin nhạy cảm khác. Nếu hackers chèn và gửi các lệnh SQL độc hại vào forms hoặc tham số URL, hacker có thể thực thi những commands để thay đổi, xóa thậm chí là trích xuất dữ liệu từ databases. Đó cũng chính là mục tiêu của SQL Injection.
 
@@ -56,5 +56,25 @@ Vì điều kiện trong lệnh WHERE luôn trả về TRUE nên t sẽ đăng n
 Sau khi đã nắm được ý tưởng chính của SQLi, t đã có thể giải được lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass) và lab [này](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data).
 
 ## 3. Trích Xuất Dữ Liệu
+Truy xuất tất cả các bảng trong databases:
+```
+  SELECT NULL,...,NULL,table_name
+  FROM information_schema.tables
+```
+"table_name" và "information_schema.tables" là các từ khóa, do đó phải để nguyên như vậy. Còn "NULL,...,NULL" là gì? Như t đã đề cập trước đó, số lượng của các cột phải khớp với nhau khi SELECT thì UNION mới hoạt động. Do đó phải thêm một vài cột NULL để đảm bảo số lượng cột khớp với các SELECT trước đó.
+
+Khi đã biết được tên tất cả bảng có trong databases, đã xác định được bảng nào muốn trích xuất (ở đây lấy ví dụ như t muốn trích xuất dữ liệu từ bảng "users"), điều tiếp theo là, truy xuất tất cả tên cột trong bảng:
+```
+  SELECT NULL,...NULL,column_name
+  FROM information_schema.columns
+  WHERE table_name='users'
+```
+Giống với lệnh phía trên, "column_name", "information_schema.columns" và "table_name" là các từ khóa.
+
+Sau khi đã biết tất cả tên cột rồi, việc còn lại chỉ là tìm tên cột cần quan tâm và trích xuất nó ra thôi.
+```
+  SELECT NULL,...,NULL,username,password
+  FROM users
+```
 
 # II. sqlmap Tool (coming soon)
