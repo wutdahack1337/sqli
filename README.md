@@ -76,6 +76,6 @@ Sau khi đã biết tất cả tên cột rồi, việc còn lại chỉ là tì
   SELECT NULL,...,NULL,username,password
   FROM users
 ```
-Sau khi đã được tìm hiểu ý tưởng chính, t đã có thể giải được bài lab [này](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-non-oracle).
+Sau khi đã được tìm hiểu được những lệnh cần thiết, t đã có thể giải được bài lab [này](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-non-oracle).
 
 # II. sqlmap Tool (coming soon)
