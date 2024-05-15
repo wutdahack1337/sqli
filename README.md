@@ -33,7 +33,7 @@ Truy vấn sẽ nhìn như thế này:
 ```
 Nếu điều kiện trong WHERE trả về TRUE, người dùng sẽ được xác thực thành công, người lại thì đăng nhập không thành công.
 
-Hai thứ quan trọng cần phải biết để có thể tấn công SQLi là "--"/"#" và lệnh "UNION". Nếu "--" xuất hiện trong một câu lệnh, nó sẽ bỏ qua tất cả mọi thứ phía sau nó (giống "//" trong C). Còn lệnh "UNION" được sử dụng để kết hợp nhiều truy vấn lại với nhau.
+Hai thứ quan trọng cần phải biết để có thể tấn công SQLi là "--"/"#" và lệnh "UNION". Nếu "--" xuất hiện trong một câu lệnh, nó sẽ bỏ qua tất cả mọi thứ phía sau nó (giống "//" trong C). Còn lệnh "UNION" được sử dụng để kết hợp nhiều kết quả của nhiều truy vấn lại với nhau, do đó số lượng cột được SELECT phải bằng nhau.
 
 Hãy thử đoán xem chuyện gì sẽ xảy ra nếu t nhấn nút "Log in" khi nhập thông tin sau:
 ![image](https://github.com/wutdahack1337/sqli/assets/153523415/9f857e78-db26-4d37-ba5a-9865be73d528)
