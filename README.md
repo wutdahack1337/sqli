@@ -53,7 +53,7 @@ Như t đã nói trước đó, "--" sẽ lờ đi tất cả những gì đằn
 ```
 Vì điều kiện trong lệnh WHERE luôn trả về TRUE nên t sẽ đăng nhập được mà không cần tới mật khẩu!!!  
 
-Sau khi đã nắm được ý tưởng chính của SQLi, t đã có thể giải được lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass) và lab [này](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data).
+Sau khi đã nắm được ý tưởng chính, t đã có thể giải được lab [này](https://portswigger.net/web-security/sql-injection/lab-login-bypass) và lab [này](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data).
 
 ## 3. Trích Xuất Dữ Liệu
 Truy xuất tất cả các bảng trong databases:
@@ -76,5 +76,6 @@ Sau khi đã biết tất cả tên cột rồi, việc còn lại chỉ là tì
   SELECT NULL,...,NULL,username,password
   FROM users
 ```
+Sau khi đã được tìm hiểu ý tưởng chính, t đã có thể giải được bài lab [này](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-non-oracle).
 
 # II. sqlmap Tool (coming soon)
